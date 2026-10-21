@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roe file scanner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="scan.css">
+</head>
+<body class="wide">
+  <div class="stripe"></div>
+  <header>
+    <div class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <h1>roe</h1>
+      <span class="ver">file scanner</span>
+    </div>
+    <p>Finds hidden and plain instructions aimed at AI agents inside files. Files are read on this device and never uploaded.</p>
+  </header>
+  <main>
+    <label id="drop" class="drop" tabindex="0">
+      <input id="pick" type="file" multiple hidden>
+      <strong>Drop files here</strong>
+      <span>or click to choose · PDF, Word, PowerPoint, Excel, OpenDocument, email, HTML, Markdown, JSON, notebooks, calendar, RTF, text, images, ZIP</span>
+    </label>
+    <div class="row">
+      <button id="folder" class="link">Scan a whole folder…</button>
+      <input id="pickdir" type="file" webkitdirectory hidden>
+      <button id="copyall" class="link" hidden>Copy report (JSON)</button>
+    </div>
+    <div id="results" aria-live="polite"></div>
+    <div id="recent"></div>
+  </main>
+  <script src="detector.js"></script>
+  <script src="surfaces.js"></script>
+  <script src="zip.js"></script>
+  <script src="filescan.js"></script>
+  <script src="office.js"></script>
+  <script src="pdfscan.js"></script>
+  <script src="imagescan.js"></script>
+  <script src="scan.js"></script>
+</body>
+</html>

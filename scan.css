@@ -1,0 +1,88 @@
+body.wide {
+  width: auto;
+  max-width: 820px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+body.wide main { padding: 20px 20px 40px; }
+
+.drop {
+  display: block;
+  border: 1px dashed var(--navy);
+  padding: 36px 18px;
+  text-align: center;
+  cursor: pointer;
+  background: var(--foam);
+}
+
+.drop strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.drop:hover,
+.drop.over,
+.drop:focus-visible {
+  border-color: var(--red);
+  background: var(--cream);
+  outline: none;
+}
+
+.drop span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.row { display: flex; gap: 16px; margin: 12px 0 4px; flex-wrap: wrap; }
+
+.file {
+  border: 1px solid var(--line);
+  margin: 14px 0;
+  background: var(--foam);
+  overflow: hidden;
+}
+
+.file > .head {
+  padding: 12px 14px;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  border-left: 4px solid var(--navy);
+}
+
+.file.bad > .head {
+  border-left-color: var(--red);
+  background: var(--cream);
+}
+
+.file .name { font-weight: 600; word-break: break-all; }
+.file .meta { color: var(--muted); font-family: var(--mono); font-size: 11px; }
+.file .body { padding: 0 14px 12px; }
+
+.file .thumbs { display: flex; gap: 10px; flex-wrap: wrap; margin: 8px 0; }
+.file .thumbs figure { margin: 0; font-size: 11px; color: var(--muted); font-family: var(--mono); }
+.file .thumbs img {
+  max-width: 240px;
+  max-height: 160px;
+  border: 1px solid var(--line);
+  display: block;
+  background: var(--foam);
+}
+
+.file .notes { color: var(--muted); font-size: 13px; margin: 6px 0; }
+.file .kids { font-size: 12.5px; color: var(--muted); margin: 6px 0; }
+
+#recent h2 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 28px 0 8px;
+}
+
+#recent details { border-top: 1px solid var(--line); }
